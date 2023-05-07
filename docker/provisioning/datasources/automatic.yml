@@ -2,20 +2,19 @@ apiVersion: 1
 
 datasources:
 - name: postgres
+  uid: "c22050d0-159f-4f1b-bcf8-291f0b88612a"
   type: postgres
   access: proxy
-  url: 172.17.0.2:5432
+  url: 172.17.0.1:5431
   password: pass
   user: postgres
-  database: 
+  database: postgres
   basicAuth: false
-  basicAuthUser:
-  basicAuthPassword:
-  withCredentials:
   isDefault: true
   jsonData:
      tlsAuth: false
      tlsAuthWithCACert: false
+     sslmode: disable
   secureJsonData:
     tlsCACert: ""
     tlsClientCert: ""
